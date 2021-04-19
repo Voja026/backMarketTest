@@ -1,6 +1,6 @@
 # BackMarketTest
 
-Set of cypress tests for the Back Market creation of user, connection, disconnection, and registaration failed.
+Set of cypress tests for the Back Market creation of user, connection, disconnection, and registration failed.
 
 Copy or clone files to your local cypress\integration folder,
 
