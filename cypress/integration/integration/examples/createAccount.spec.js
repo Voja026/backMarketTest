@@ -16,7 +16,7 @@ describe('Creating account on Back Market', () => {
     cy.get('[data-test=signup-submit-button]').click()
     cy.url().should('contain','dashboard/orders')
     cy.get('[data-test=user-icon-link]').click()
-    cy.get('._36Jahm3PBECczuvCPC6vFq').click()
+    cy.contains('Déconnexion').click()
     cy.title().should('contain.html','https://preprod.backmarket.fr/register')
     })
 })
