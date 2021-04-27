@@ -15,7 +15,7 @@ describe('Creating account on Back Market', () => {
     cy.get('#password-signup').type('Wildcodeschool123')
     cy.get('[data-test=signup-submit-button]').click()
     cy.url().should('contain','dashboard/orders')
-    cy.get('._2widA810d2j5Lui3YSvHeH').click()
+    cy.get('[data-test=user-icon-link]').click()
     cy.get('._36Jahm3PBECczuvCPC6vFq').click()
     cy.title().should('contain.html','https://preprod.backmarket.fr/register')
     })
