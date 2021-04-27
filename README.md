@@ -1,42 +1,30 @@
-# BackMarketTest
+# BackMarket set of tests with Cypress 
 
-Set of cypress tests for the Back Market creation of user, connection, disconnection, and registration failed.
 
-Copy or clone files to your local cypress\integration folder,
+Back Market or Jung SAS https://www.backmarket.fr/ is a French e-commerce company, created in 20141, which serves as an intermediary between individuals and professionals in the reconditioning of electrical and electronic devices.
 
-Windows:
-Install Cypress via npm:
-cd /your/project/path
+This git repo hosts series of tests on backMarket.fr
+
+---
+## Contributors:
+
+- Vojislav Andelkovic
+
+---
+
+## How to test:
+ 
+```
+git clone https://github.com/Voja026/backMarketTest
+
+if you do not have Cypress already installed on your machine, then:
+
 npm install cypress --save-dev
-This will install Cypress locally as a dev dependency for your project.
 
-or for the Linux:
-Linux
-If you're using Linux, you'll want to have the required dependencies installed on your system.
+but, if you already have Cypress then you can just do:
 
-We also have an official cypress/base Docker container with all of the required dependencies installed.
-
-Ubuntu/Debian
-apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-CentOS
-yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 
-
-If you used npm to install, Cypress has now been installed to your ./node_modules directory, with its binary executable accessible from ./node_modules/.bin.
-
-Now you can open Cypress from your project root one of the following ways:
-
-The long way with the full path
-
-./node_modules/.bin/cypress open
-Or with the shortcut using npm bin
-
-$(npm bin)/cypress open
-Or by using npx
-
-note: npx is included with npm > v5.2 or can be installed separately.
+npm install 
 
 npx cypress open
-Or by using yarn
-yarn run cypress open
 
-Execute tests using Test Runner.
+And then in Cypress Test Runner execute test that you wish.
