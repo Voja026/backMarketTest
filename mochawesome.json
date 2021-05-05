@@ -1,0 +1,531 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 8,
+    "passes": 3,
+    "pending": 0,
+    "failures": 5,
+    "start": "2021-05-05T07:41:44.191Z",
+    "end": "2021-05-05T07:46:09.726Z",
+    "duration": 142693,
+    "testsRegistered": 8,
+    "passPercent": 37.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7884b63d-9aff-428d-b015-7e385a3968f3",
+      "title": "",
+      "fullFile": "cypress/integration/examples/createAccount.spec.js",
+      "file": "cypress/integration/examples/createAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e672cdf9-9f43-4955-9517-89dca7d7f3ea",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 29640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing@email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing@email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.url().should('contain', 'dashboard/orders');\ncy.get('._2widA810d2j5Lui3YSvHeH').click();\ncy.get('._36Jahm3PBECczuvCPC6vFq').click();\ncy.title().should('contain.html', 'https://preprod.backmarket.fr/register');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/examples/createAccount.spec.js:114:14)",
+                "diff": null
+              },
+              "uuid": "1dc65618-9b74-4793-a818-cceb3cc57c35",
+              "parentUUID": "e672cdf9-9f43-4955-9517-89dca7d7f3ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1dc65618-9b74-4793-a818-cceb3cc57c35"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29640,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ed3cda1d-0ad0-441c-b498-a129d31318f8",
+      "title": "",
+      "fullFile": "cypress/integration/examples/createAccountFailed.spec.js",
+      "file": "cypress/integration/examples/createAccountFailed.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a362f446-1564-4a9b-9170-a114520e18a0",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 22398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing.email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing.email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');",
+              "err": {},
+              "uuid": "1004b35f-5a85-467e-a5a7-e38a8da3792a",
+              "parentUUID": "a362f446-1564-4a9b-9170-a114520e18a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1004b35f-5a85-467e-a5a7-e38a8da3792a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22398,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3f9952db-c1ed-415a-8cd9-d8878ce0887d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/disconnect.spec.js",
+      "file": "cypress/integration/examples/disconnect.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa0c4aa3-660a-43dd-8e3a-08f2cbc2566f",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Discconect from the account",
+              "fullTitle": "Creating account on Back Market Discconect from the account",
+              "timedOut": null,
+              "duration": 7590,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._2uwHBcO7tJFnx16rFCurMs').click();\ncy.get('._36Jahm3PBECczuvCPC6vFq').click;\ncy.title().should('contain', 'Rejoignez Back Market | Back Market');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `._2uwHBcO7tJFnx16rFCurMs`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `._2uwHBcO7tJFnx16rFCurMs`, but never found it.\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/examples/disconnect.spec.js:104:8)",
+                "diff": null
+              },
+              "uuid": "82f9be10-f7e8-4a35-80e4-25dad43b17fb",
+              "parentUUID": "fa0c4aa3-660a-43dd-8e3a-08f2cbc2566f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "82f9be10-f7e8-4a35-80e4-25dad43b17fb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7590,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b7071b9e-4fbf-441f-8099-ca3e0aa14f0f",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/connectionAccount.spec.js",
+      "file": "cypress/integration/integration/examples/connectionAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b153dbec-5aac-478f-b9bf-66320549a734",
+          "title": "Connection on a existing account Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Connection with existing account",
+              "fullTitle": "Connection on a existing account Back Market Connection with existing account",
+              "timedOut": null,
+              "duration": 20778,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/register');\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(3000);\ncy.get('#email-signin').click().type('slow.typing@email.com');\ncy.get('#email-signin').should('have.value', 'slow.typing@email.com');\ncy.get('#password-signin').type('Wildcodeschool123');\ncy.get('[data-test=copy-wrap]').click({\n  multiple: true\n});\ncy.wait(5000);\ncy.title().should('contain', 'Back Market');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Just a moment...' to include 'Back Market'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Just a moment...' to include 'Back Market'\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/integration/examples/connectionAccount.spec.js:112:16)",
+                "diff": null
+              },
+              "uuid": "fc59dd5e-354c-4ba1-8cab-9bf069c1f2a0",
+              "parentUUID": "b153dbec-5aac-478f-b9bf-66320549a734",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fc59dd5e-354c-4ba1-8cab-9bf069c1f2a0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20778,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bdcaddf8-58c1-4f37-a583-179dbad2969e",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/createAccount.spec.js",
+      "file": "cypress/integration/integration/examples/createAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "215f1949-7d23-464c-9955-137b4f0ff9d4",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 18189,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing@email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing@email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.url().should('contain', 'dashboard/orders');\ncy.get('[data-test=user-icon-link]').click();\ncy.contains('Déconnexion').click();\ncy.title().should('contain.html', 'https://preprod.backmarket.fr/register');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/integration/examples/createAccount.spec.js:114:14)",
+                "diff": null
+              },
+              "uuid": "49867066-3fdc-4030-b210-2fa2b9e7d920",
+              "parentUUID": "215f1949-7d23-464c-9955-137b4f0ff9d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "49867066-3fdc-4030-b210-2fa2b9e7d920"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18189,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "178d663a-542d-42ac-a9d1-e613c180eb46",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/createAccountFailed.spec.js",
+      "file": "cypress/integration/integration/examples/createAccountFailed.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05185a54-d81c-45f4-87b5-a9ac53aa1df3",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 16442,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing.email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing.email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');",
+              "err": {},
+              "uuid": "2ca1d76c-24f4-4fc4-8c5d-c8c48fbf6a1c",
+              "parentUUID": "05185a54-d81c-45f4-87b5-a9ac53aa1df3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ca1d76c-24f4-4fc4-8c5d-c8c48fbf6a1c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "34f55bd0-87bf-46ff-956c-e2848b7252cc",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/disconnect.spec.js",
+      "file": "cypress/integration/integration/examples/disconnect.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "707f0740-0f54-4e1d-ae36-3cf8b851e029",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Discconect from the account",
+              "fullTitle": "Creating account on Back Market Discconect from the account",
+              "timedOut": null,
+              "duration": 9793,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('[data-test=user-icon-link]').click();\ncy.contains('Déconnexion').click();\ncy.title().should('contain', 'Rejoignez Back Market | Back Market');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<button name=\"header_subnav_logout\" class=\"_3n2xnit7tS5cnEawJw8ljw\">...</button>`\n\nThis element `<button._3n2xnit7tS5cnEawJw8ljw>` is not visible because its parent `<div.a-overlay-dropdown>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<button name=\"header_subnav_logout\" class=\"_3n2xnit7tS5cnEawJw8ljw\">...</button>`\n\nThis element `<button._3n2xnit7tS5cnEawJw8ljw>` is not visible because its parent `<div.a-overlay-dropdown>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:142031:24)\n    at runAllChecks (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:130785:14)\n    at retryActionability (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:130839:16)\n    at tryCatcher (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10791:23)\n    at Function.Promise.attempt.Promise.try (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8065:29)\n    at tryFn (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146634:21)\n    at whenStable (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146672:12)\n    at https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146164:16\n    at tryCatcher (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8908:18)\n    at Promise._fulfill (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8852:18)\n    at https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10466:46\nFrom Your Spec Code:\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/integration/examples/disconnect.spec.js:105:32)",
+                "diff": null
+              },
+              "uuid": "ae907742-ea45-4e75-8eb8-fd96c18d231b",
+              "parentUUID": "707f0740-0f54-4e1d-ae36-3cf8b851e029",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ae907742-ea45-4e75-8eb8-fd96c18d231b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2aea0ff1-e833-423a-9670-70d63b86b3ad",
+      "title": "",
+      "fullFile": "cypress/integration/examples/connectionAccount.spec.js",
+      "file": "cypress/integration/examples/connectionAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5d5c1278-ac66-4908-b4e7-58d037a3fcf4",
+          "title": "Connection on a existing account Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Connection with existing account",
+              "fullTitle": "Connection on a existing account Back Market Connection with existing account",
+              "timedOut": null,
+              "duration": 17863,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/register');\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(3000);\ncy.get('#email-signin').click().type('slow.typing@email.com');\ncy.get('#email-signin').should('have.value', 'slow.typing@email.com');\ncy.get('#password-signin').type('Wildcodeschool123');\ncy.get('[data-test=copy-wrap]').click({\n  multiple: true\n});\ncy.wait(5000);\ncy.title().should('contain', 'Back Market');",
+              "err": {},
+              "uuid": "67b048e9-c751-4c57-8f39-1303c6c3b575",
+              "parentUUID": "5d5c1278-ac66-4908-b4e7-58d037a3fcf4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67b048e9-c751-4c57-8f39-1303c6c3b575"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17863,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

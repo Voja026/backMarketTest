@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-05T07:42:21.566Z",
+    "end": "2021-05-05T07:42:55.860Z",
+    "duration": 34294,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7884b63d-9aff-428d-b015-7e385a3968f3",
+      "title": "",
+      "fullFile": "cypress/integration/examples/createAccount.spec.js",
+      "file": "cypress/integration/examples/createAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e672cdf9-9f43-4955-9517-89dca7d7f3ea",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 29640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing@email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing@email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.url().should('contain', 'dashboard/orders');\ncy.get('._2widA810d2j5Lui3YSvHeH').click();\ncy.get('._36Jahm3PBECczuvCPC6vFq').click();\ncy.title().should('contain.html', 'https://preprod.backmarket.fr/register');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://preprod.backmarket.fr/register' to include 'dashboard/orders'\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/examples/createAccount.spec.js:114:14)",
+                "diff": null
+              },
+              "uuid": "1dc65618-9b74-4793-a818-cceb3cc57c35",
+              "parentUUID": "e672cdf9-9f43-4955-9517-89dca7d7f3ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1dc65618-9b74-4793-a818-cceb3cc57c35"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29640,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

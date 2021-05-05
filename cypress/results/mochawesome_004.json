@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-05T07:44:14.075Z",
+    "end": "2021-05-05T07:44:38.426Z",
+    "duration": 24351,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7071b9e-4fbf-441f-8099-ca3e0aa14f0f",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/connectionAccount.spec.js",
+      "file": "cypress/integration/integration/examples/connectionAccount.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b153dbec-5aac-478f-b9bf-66320549a734",
+          "title": "Connection on a existing account Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Connection with existing account",
+              "fullTitle": "Connection on a existing account Back Market Connection with existing account",
+              "timedOut": null,
+              "duration": 20778,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/register');\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(3000);\ncy.get('#email-signin').click().type('slow.typing@email.com');\ncy.get('#email-signin').should('have.value', 'slow.typing@email.com');\ncy.get('#password-signin').type('Wildcodeschool123');\ncy.get('[data-test=copy-wrap]').click({\n  multiple: true\n});\ncy.wait(5000);\ncy.title().should('contain', 'Back Market');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Just a moment...' to include 'Back Market'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Just a moment...' to include 'Back Market'\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/integration/examples/connectionAccount.spec.js:112:16)",
+                "diff": null
+              },
+              "uuid": "fc59dd5e-354c-4ba1-8cab-9bf069c1f2a0",
+              "parentUUID": "b153dbec-5aac-478f-b9bf-66320549a734",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fc59dd5e-354c-4ba1-8cab-9bf069c1f2a0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20778,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

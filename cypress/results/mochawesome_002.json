@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-05T07:43:12.891Z",
+    "end": "2021-05-05T07:43:37.356Z",
+    "duration": 24465,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed3cda1d-0ad0-441c-b498-a129d31318f8",
+      "title": "",
+      "fullFile": "cypress/integration/examples/createAccountFailed.spec.js",
+      "file": "cypress/integration/examples/createAccountFailed.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a362f446-1564-4a9b-9170-a114520e18a0",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating account",
+              "fullTitle": "Creating account on Back Market Creating account",
+              "timedOut": null,
+              "duration": 22398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._1Hy3iZ0THBmZ6r_sT34Sf6').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');\ncy.wait(5000);\ncy.get('#email-signup').type('slow.typing.email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing.email.com');\ncy.get('#firstName-signup').type('Vojislav');\ncy.get('#lastName-signup').type('Andelkovic');\ncy.get('#password-signup').type('Wildcodeschool123');\ncy.get('[data-test=signup-submit-button]').click();\ncy.title().should('eq', 'Rejoignez Back Market | Back Market');",
+              "err": {},
+              "uuid": "1004b35f-5a85-467e-a5a7-e38a8da3792a",
+              "parentUUID": "a362f446-1564-4a9b-9170-a114520e18a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1004b35f-5a85-467e-a5a7-e38a8da3792a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22398,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

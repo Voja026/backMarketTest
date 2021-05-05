@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-05T07:43:53.288Z",
+    "end": "2021-05-05T07:44:05.089Z",
+    "duration": 11801,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f9952db-c1ed-415a-8cd9-d8878ce0887d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/disconnect.spec.js",
+      "file": "cypress/integration/examples/disconnect.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa0c4aa3-660a-43dd-8e3a-08f2cbc2566f",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Discconect from the account",
+              "fullTitle": "Creating account on Back Market Discconect from the account",
+              "timedOut": null,
+              "duration": 7590,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('._2uwHBcO7tJFnx16rFCurMs').click();\ncy.get('._36Jahm3PBECczuvCPC6vFq').click;\ncy.title().should('contain', 'Rejoignez Back Market | Back Market');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `._2uwHBcO7tJFnx16rFCurMs`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `._2uwHBcO7tJFnx16rFCurMs`, but never found it.\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/examples/disconnect.spec.js:104:8)",
+                "diff": null
+              },
+              "uuid": "82f9be10-f7e8-4a35-80e4-25dad43b17fb",
+              "parentUUID": "fa0c4aa3-660a-43dd-8e3a-08f2cbc2566f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "82f9be10-f7e8-4a35-80e4-25dad43b17fb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7590,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

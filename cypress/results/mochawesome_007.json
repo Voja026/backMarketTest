@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-05T07:45:57.769Z",
+    "end": "2021-05-05T07:46:09.726Z",
+    "duration": 11957,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34f55bd0-87bf-46ff-956c-e2848b7252cc",
+      "title": "",
+      "fullFile": "cypress/integration/integration/examples/disconnect.spec.js",
+      "file": "cypress/integration/integration/examples/disconnect.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "707f0740-0f54-4e1d-ae36-3cf8b851e029",
+          "title": "Creating account on Back Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Discconect from the account",
+              "fullTitle": "Creating account on Back Market Discconect from the account",
+              "timedOut": null,
+              "duration": 9793,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/');\ncy.title().should('eq', 'Back Market – le (super) marché du reconditionné');\ncy.get('[data-test=user-icon-link]').click();\ncy.contains('Déconnexion').click();\ncy.title().should('contain', 'Rejoignez Back Market | Back Market');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<button name=\"header_subnav_logout\" class=\"_3n2xnit7tS5cnEawJw8ljw\">...</button>`\n\nThis element `<button._3n2xnit7tS5cnEawJw8ljw>` is not visible because its parent `<div.a-overlay-dropdown>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<button name=\"header_subnav_logout\" class=\"_3n2xnit7tS5cnEawJw8ljw\">...</button>`\n\nThis element `<button._3n2xnit7tS5cnEawJw8ljw>` is not visible because its parent `<div.a-overlay-dropdown>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:142031:24)\n    at runAllChecks (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:130785:14)\n    at retryActionability (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:130839:16)\n    at tryCatcher (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10791:23)\n    at Function.Promise.attempt.Promise.try (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8065:29)\n    at tryFn (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146634:21)\n    at whenStable (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146672:12)\n    at https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:146164:16\n    at tryCatcher (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8908:18)\n    at Promise._fulfill (https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:8852:18)\n    at https://preprod.backmarket.fr/__cypress/runner/cypress_runner.js:10466:46\nFrom Your Spec Code:\n    at Context.eval (https://preprod.backmarket.fr/__cypress/tests?p=cypress/integration/integration/examples/disconnect.spec.js:105:32)",
+                "diff": null
+              },
+              "uuid": "ae907742-ea45-4e75-8eb8-fd96c18d231b",
+              "parentUUID": "707f0740-0f54-4e1d-ae36-3cf8b851e029",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ae907742-ea45-4e75-8eb8-fd96c18d231b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
